@@ -112,6 +112,8 @@ Cloud Schedulers are configured using cron jobs to trigger Cloud Functions and D
 ### Data Storage in BigQuery
 
 After processing, data is loaded into BigQuery tables:
+
+
 ![Data Storage](Images/image2.png)
 
 * `Ercot_fm_load_merged`
