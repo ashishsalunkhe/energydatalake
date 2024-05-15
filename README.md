@@ -12,7 +12,7 @@
 
 ## Summary
 
-Our Data pipeline ingests data from 5 APIs and loads it as is in cloud storage. Our workflow executes the relevant Pyspark jobs to pick up all the files in the cloud storage, transform the data to represent correct data types, removes nulls, duplicates, merged data where required, to populate the corresponding BigQuery tables.
+Our Data pipeline ingests data from 5 APIs and loads it as is in cloud storage. Our cloud functions fetch the data from relevant APIs. Our workflows execute the relevant Pyspark jobs to pick up all the files in the cloud storage, transform the data to represent correct data types, remove nulls and duplicates, merge data where required, to populate the corresponding BigQuery tables and then move the files to archive folder. All these actions are synchronized using Cloud schedulers.
 
 
 ## ELT Diagram
