@@ -1,0 +1,5 @@
+functions-framework==3.*
+gridstatus >= 0.27.0
+pandas >= 2.2.1
+google-cloud-storage>=1.44.0
+google-cloud-bigquery
