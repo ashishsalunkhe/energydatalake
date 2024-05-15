@@ -123,7 +123,8 @@ After processing, data is loaded into BigQuery tables:
 ![Data Storage](Images/image1.png)
 
 * `Ercot_load_historical`
-![Data Storage](Images/image5.png)
+![Data Storage](Images/image3.png)
+![Data Storage](Images/image11.png)
 
 * `Ercot_load_latest`
 ![Data Storage](Images/image9.png)
