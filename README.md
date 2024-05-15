@@ -15,6 +15,65 @@
 Our Data pipeline ingests data from 5 APIs and loads it as is in cloud storage. Our cloud functions fetch the data from relevant APIs. Our workflows execute the relevant Pyspark jobs to pick up all the files in the cloud storage, transform the data to represent correct data types, remove nulls and duplicates, merge data where required, to populate the corresponding BigQuery tables and then move the files to archive folder. All these actions are synchronized using Cloud schedulers.
 
 
+### Electric Reliability Council of Texas (ERCOT)
+
+The Electric Reliability Council of Texas (ERCOT) manages the flow of electric power to more than 26 million Texas customers -- representing about 90 percent of the state’s electric load. As the independent system operator for the region, ERCOT schedules power on an electric grid that connects more than 54,100 miles of transmission lines and 1,250 generation units, including Private Use Networks. It also performs financial settlement for the competitive wholesale bulk-power market and administers retail switching for 8 million premises in competitive choice areas.
+
+### ercot_fuel_mix:
+This API provides insights into the energy sources utilized for electricity generation within the ERCOT region.
+
+### ercot_load_forecast & ercot_load:
+These APIs offer data on both forecasted and actual electricity demand across various regions within ERCOT. 
+
+### ercot_spp:
+It includes information on energy prices within the ERCOT markets based on load zones.
+
+**Documentation of All Endpoints:** 
+
+* https://www.ercot.com/services/mdt/data-portal
+* https://docs.gridstatus.io/en/latest/index.html
+* https://www.gridstatus.io/datasets
+* https://apiexplorer.ercot.com/
+
+## OpenMeteo Data:
+
+This API provides an extensive range of weather data points that can be correlated with energy consumption patterns:
+
+### Temperature_2m:
+Directly impacts heating and cooling requirements, thus influencing energy demand throughout different seasons.
+
+### Precipitation:
+Heavy rainfall or snowfall can disrupt energy production from sources like solar or wind, affecting overall energy availability and grid stability.
+
+### Wind Speed:
+Wind speed and direction play a significant role in wind power generation, making this data crucial for assessing the impact of weather on renewable energy production.
+
+### Cloud Cover:
+Cloud cover directly affects solar energy production by obstructing sunlight. Monitoring cloud cover data helps in understanding the variability in solar energy generation and its impact on the energy grid.
+
+### Example Endpoint
+
+https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.41&start_date=2024-04-29&end_date=2024-05-13&hourly=temperature_2m
+
+## OpenWeather Current Weather Data API
+
+This API provides access to current weather data, including minute-by-minute forecast for 1 hour and hourly forecast for 48 hours.
+
+Endpoint: https://api.openweathermap.org/data/2.5/weather
+
+
+**Parameters:**
+- `lat` (required): Latitude of the location. If you need geocoding services, you can use the OpenWeather Geocoding API.
+- `lon` (required): Longitude of the location. If you need geocoding services, you can use the OpenWeather Geocoding API.
+- `appid` (required): Your unique API key, which can be found on your OpenWeather account page under the "API key" tab.
+- `mode` (optional): Response format. Possible values are `xml` and `html`. If not specified, JSON format is used by default.
+- `units` (optional): Units of measurement. Possible values are `standard`, `metric`, and `imperial`. If not specified, standard units are used by default.
+- `lang` (optional): Language parameter to specify the output language.
+
+**Example Request:**
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+
 ## ELT Diagram
 
 ![ELT Diagram](Images/architecture.png)
@@ -239,3 +298,12 @@ GROUP BY
     Temperature, Humidity, Wind_Speed
 ORDER BY 
     average_price DESC;
+
+
+## References
+
+* Electric Reliability Council of Texas. (n.d.). About ERCOT. Retrieved February 25, 2024, from https://www.ercot.com/about
+* Gridstatus. (n.d.). ERCOT Grid Status. Retrieved February 25, 2024, from https://www.gridstatus.io/live/ercot
+* Gridstatus. (n.d.). Gridstatus Documentation. Retrieved February 25, 2024, from https://docs.gridstatus.io/en/latest/index.html
+* OpenWeather. (n.d.). OpenWeatherMap API Documentation. Retrieved February 25, 2024, from https://openweathermap.org/api
+* Open-Meteo. (n.d.). Open-Meteo API Documentation. Retrieved May 19, 2024, from https://open-meteo.com/en/docs
