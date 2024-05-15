@@ -143,8 +143,17 @@ After processing, data is loaded into BigQuery tables:
 Queries are used to fetch data from BigQuery for business analysis. Visualizations are then created using Google Looker.
 
 
-
 ![Data Storage](Images/Energy_Generation_and_Load_Consumption_Over_Time.png) 
+It appears that generation is highest during the middle of the day, which is likely due to solar power generation. Consumption is highest in the morning and evening, when people are typically awake and using appliances.  Overall, nuclear and natural gas appears to be following a predictable pattern, while solar and wind is more erratic.
+
+![Data Storage](Images/Load-forecast-viz.png)
+The chart illustrates the forecasted electrical load spanning three days across five locations: Houston, North, South, West, and the system total. It visually demonstrates a trend where the total energy demand increases throughout the day, peaking during daytime hours and tapering off during the night. This trend aligns with typical human activity patterns.
+
+![Data Storage](Images/weather-and-spp-over-time.png)
+The graph depicts the Settlement point priceprice (SPP) alongside weather conditions (Humidity, Temperature, and Wind Speed) over the course of a day
+It appears that there is not a clear correlation between the weather conditions and the price of energy. However, it is important to note that this data is only for one day, so it may not be representative of a typical day or season.
+
+
 ### Queries
 
 Business Question 1:
