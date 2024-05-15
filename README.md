@@ -15,7 +15,7 @@
 Our Data pipeline ingests data from 5 APIs and loads it as is in cloud storage. Our cloud functions fetch the data from relevant APIs. Our workflows execute the relevant Pyspark jobs to pick up all the files in the cloud storage, transform the data to represent correct data types, remove nulls and duplicates, merge data where required, to populate the corresponding BigQuery tables and then move the files to archive folder. All these actions are synchronized using Cloud schedulers.
 
 
-### Electric Reliability Council of Texas (ERCOT)
+## Electric Reliability Council of Texas (ERCOT)
 
 The Electric Reliability Council of Texas (ERCOT) manages the flow of electric power to more than 26 million Texas customers -- representing about 90 percent of the state’s electric load. As the independent system operator for the region, ERCOT schedules power on an electric grid that connects more than 54,100 miles of transmission lines and 1,250 generation units, including Private Use Networks. It also performs financial settlement for the competitive wholesale bulk-power market and administers retail switching for 8 million premises in competitive choice areas.
 
