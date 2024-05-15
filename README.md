@@ -112,23 +112,28 @@ Cloud Schedulers are configured using cron jobs to trigger Cloud Functions and D
 ### Data Storage in BigQuery
 
 After processing, data is loaded into BigQuery tables:
+![Data Storage](Images/image2.png)
 
 * `Ercot_fm_load_merged`
 ![Data Storage](Images/image5.png)
+![Data Storage](Images/image15.png)
 
 * `Ercot_load_forecast`
 ![Data Storage](Images/image16.png)
+![Data Storage](Images/image1.png)
 
 * `Ercot_load_historical`
 ![Data Storage](Images/image5.png)
 
 * `Ercot_load_latest`
 ![Data Storage](Images/image9.png)
+![Data Storage](Images/image6.png)
 
 * `Ercot_spp_weather_merged`
 ![Data Storage](Images/image14.png)
+![Data Storage](Images/image17.png)
 
-![Data Storage](Images/image2.png)
+
 
 ### Data Analysis with Looker
 
