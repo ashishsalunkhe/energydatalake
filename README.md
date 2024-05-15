@@ -133,7 +133,7 @@ After processing, data is loaded into BigQuery tables:
 ![Data Storage](Images/image6.png)
 
 * `Ercot_spp_weather_merged`
-![Data Storage](Images/image14.png)
+![Data Storage](Images/image.png)
 ![Data Storage](Images/image17.png)
 
 
