@@ -1,14 +1,4 @@
-# INST767_Project_Team-6 Ercot and weather Energy Data Lake
-
-## Team Details
-
-| Name              |
-|-------------------|
-| Ushasri Bhogaraju |
-| Aditya Kiran      |
-| Shashank Ramprasad|
-| Ashish Salunkhe   |
-| Bingqi Lian       |
+# Grid Status: ERCOT - Energy Data Lake
 
 ## Summary
 
